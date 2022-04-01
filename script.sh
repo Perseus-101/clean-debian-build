@@ -9,6 +9,7 @@ sudo apt-get --purge remove gnome-weather -y
 
 # Getting Rid of all unnecessary dependencies 
 sudo apt-get autoremove
+sudo apt clean 
 
 #Updating and Upgrading Pop!
 sudo apt-get update -y
@@ -23,3 +24,10 @@ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/ms-teams
 #Brave
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+
+#Updating all the repositories 
+sudo apt update
+
+#Installing additional applications
+sudo apt-get install teams
+sudo apt-get install brave
